@@ -1,0 +1,29 @@
+.new_user {
+  label {
+    font-size: $font-size-small;
+    text-transform: uppercase;
+    color: fade-out($brand-primary, 0.25);
+    color: $brand-primary;
+    font-weight: 300;
+    letter-spacing: 1px;
+  }
+  fieldset {
+    .form-group {
+      margin-bottom: -1px;
+    }
+    input {
+      border-radius: 0px;
+    }
+    .form-group:nth-of-type(1) input {
+        border-top-right-radius: $input-border-radius;
+        border-top-left-radius: $input-border-radius;
+    }
+    .form-group:nth-last-of-type(1) {
+      margin-bottom: 15px;
+      input {
+        border-bottom-right-radius: $input-border-radius;
+        border-bottom-left-radius: $input-border-radius;
+      }
+    }
+  }
+}

@@ -1,0 +1,17 @@
+.col-lg-6.col-lg-offset-3
+  %h1.text-center Let's do this!
+  .jumbotron
+    = bootstrap_form_for @user, class: 'signup' do |f|
+      -# = render partial: 'errors', locals: { model: @user }
+      = f.text_field :username, placeholder: 'Letters, numbers, and dashes'
+      = f.email_field :email, placeholder: 'you@example.com'
+      -# %hr
+      %fieldset
+        = f.password_field :password, placeholder: 'At least 8 characters'
+        = f.password_field :password_confirmation, hide_label: true, placeholder: 'Confirm'
+
+      = f.submit 'Sign up', class: 'btn btn-primary btn-block'
+    %hr
+    .text-center
+      = link_to 'I already have an account', root_path, class: 'btn btn-link'
+  

@@ -1,0 +1,5 @@
+= form_for @user do |f|
+  = render partial: 'errors', locals: { model: @user }
+
+  .actions
+    = f.submit 'Save', class: 'btn btn-success'
